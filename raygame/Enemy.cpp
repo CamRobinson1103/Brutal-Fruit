@@ -1,10 +1,23 @@
 #include <cmath>
-#include "Enemy.h"
 #include "raylib.h"
-#include "Sprite.h"
+#include "Enemy.h"
 
-Enemy::Enemy(float x, float y, float collisionRadius, char icon = ' ', float maxSpeed = 1, float health, float damage)
+Enemy::Enemy(float x, float y, float collisionRadius, char icon = ' ', float maxSpeed)
 {
-	m_health = health;
-	m_damage = damage;
+
+}
+
+bool Enemy::checkTargetSighted(Actor* target, float maxAngle, float maxDistance)
+{
+
+}
+
+void Enemy::update(float deltaTime)
+{
+
+}
+
+void Enemy::draw()
+{
+
 }
