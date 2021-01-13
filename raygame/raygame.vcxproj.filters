@@ -26,7 +26,11 @@
     <ClCompile Include="Sprite.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+<<<<<<< HEAD
     <ClCompile Include="Enemy.cpp">
+=======
+    <ClCompile Include="Player.cpp">
+>>>>>>> master
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -43,7 +47,11 @@
     <ClInclude Include="Sprite.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+<<<<<<< HEAD
     <ClInclude Include="Enemy.h">
+=======
+    <ClInclude Include="Player.h">
+>>>>>>> master
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
