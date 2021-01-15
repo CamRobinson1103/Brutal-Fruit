@@ -1,5 +1,7 @@
 #include "Game.h"
 #include "raylib.h"
+#include <iostream>
+using namespace std;
 
 bool Game::m_gameOver = false;
 Scene** Game::m_scenes = new Scene*;
@@ -57,6 +59,15 @@ void Game::draw()
 	EndDrawing();
 }
 
+
+void Game::battleMenu()
+{
+	cout << "__________\n";
+	cout << "|Attack(1)|\n";;
+	cout << "|Defend(2)|n";
+	cout << "__________\n";
+}
+
 void Game::end()
 {
 	CloseWindow();
@@ -70,6 +81,7 @@ MathLibrary::Matrix3* Game::getWorld()
 void Game::run()
 {
 	start();
+
 
 	while (!m_gameOver && !RAYLIB_H::WindowShouldClose())
 	{

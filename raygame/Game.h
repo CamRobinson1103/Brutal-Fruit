@@ -84,6 +84,7 @@ private:
 	void update(float delaTime);
 	void draw();
 	void end();
+    void battleMenu();
 
 private:
     Camera2D* m_camera;
