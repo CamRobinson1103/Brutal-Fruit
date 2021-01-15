@@ -1,21 +1,18 @@
 #pragma once
-
-#include "Vector2.h"
-#include "Matrix3.h"
-
-class Sprite;
-class Actor;
-
-class Enemy
+#include "Actor.h"
+class Enemy :
+	protected Actor
 {
 public:
 	Enemy();
 	Enemy(float x, float y, float collisionRadius, char icon, float maxSpeed);
-	bool checkTargetSighted(Actor* target, float maxAngle, float maxDistance);
-	void update(float deltaTime);
-	void draw();
+
+	void onCollision(Actor* other);
+	void update(float deltaTime) override;
+	void draw() override;
 
 private:
 	float m_health;
 	float m_damage;
 };
+
