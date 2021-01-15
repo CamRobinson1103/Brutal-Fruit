@@ -14,6 +14,10 @@ Game::Game()
 	m_camera = new Camera2D();
 	m_currentSceneIndex = 0;
 	m_sceneCount = 0;
+	Actor player = Actor();
+	player.weapon1 = 10;
+	player.weapon2 = 20;
+	player.weapon3 = 15;
 }
 
 void Game::start()

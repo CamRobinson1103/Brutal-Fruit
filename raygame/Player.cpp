@@ -20,11 +20,18 @@ void Player::setArea(std::string area)
     playerArea = area;
 }
 
+void Player::setMaxHealth()
+{
+}
+
+void Player::setDamage()
+{
+}
+
 void Player::setHealth(double health)
 {
     playerHealth = health;
 }
-
 
 std::string Player::getName()
 {
@@ -48,3 +55,5 @@ int Player::getDamage()
 {
     return playerDamage;
 }
+
+

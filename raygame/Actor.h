@@ -199,5 +199,11 @@ private:
     Actor* m_parent;
     int m_childCount;
     Sprite* m_sprite;
+
+public:
+    int health;
+    int weapon1;
+    int weapon2;
+    int weapon3;
 };
 

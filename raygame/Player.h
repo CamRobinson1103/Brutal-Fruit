@@ -19,7 +19,6 @@ public:
     double getHealth();
     double getMaxHealth();
     int getDamage();
-
 private:
     std::string playerName;
     std::string playerArea;
