@@ -202,8 +202,8 @@ private:
 
 public:
     int health;
-    int weapon1;
-    int weapon2;
-    int weapon3;
+    int swordDamage;
+    int gunDamage;
+    int bombDamage;
 };
 
