@@ -1,5 +1,4 @@
-#pragma once
-#pragma once
+
 #include<string>
 class Player
 {
@@ -12,10 +11,6 @@ public:
     std::string getName();
     std::string getArea();
     void setHealth(double);
-    void setMaxHealth();
-    void setDamage();
-    std::string getName();
-    std::string getArea();
     double getHealth();
     double getMaxHealth();
     int getDamage();

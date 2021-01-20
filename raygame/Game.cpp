@@ -18,8 +18,8 @@ Game::Game()
 	m_sceneCount = 0;
 	Actor player = Actor();
 	player.orangeDamage = 10;
-	player.weapon2 = 20;
-	player.weapon3 = 15;
+	player.bananaDamage = 20;
+	player.cherryDamage = 15;
 }
 
 void Game::start()
@@ -70,6 +70,7 @@ void Game::battleMenu()
 
 void Game::end()
 {
+
 	CloseWindow();
 }
 

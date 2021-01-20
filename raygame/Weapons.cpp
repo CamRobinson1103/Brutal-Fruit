@@ -5,12 +5,12 @@
 
 
 
-int main()
+int weapons()
 {
     Actor player = Actor();
     player.orangeDamage = 10;
-    player.gunDamage = 20;
-    player.bombDamage = 50;
+    player.bananaDamage = 20;
+    player.cherryDamage = 50;
 
 
     std::fstream file;
