@@ -17,7 +17,7 @@ Game::Game()
 	m_currentSceneIndex = 0;
 	m_sceneCount = 0;
 	Actor player = Actor();
-	player.weapon1 = 10;
+	player.orangeDamage = 10;
 	player.weapon2 = 20;
 	player.weapon3 = 15;
 }

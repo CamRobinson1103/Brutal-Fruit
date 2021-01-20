@@ -8,7 +8,7 @@
 int main()
 {
     Actor player = Actor();
-    player.swordDamage = 10;
+    player.orangeDamage = 10;
     player.gunDamage = 20;
     player.bombDamage = 50;
 
@@ -24,13 +24,8 @@ int main()
     file.seekg(sizeof(Actor) * 2, std::ios::beg);
 
     file << player.health << std::endl;
-    file << player.swordDamage;
-    file << player.gunDamage;
-    file << player.bombDamage;
-
-    file << enemy.health << std::endl;
-    file << enemy.swordDamage;
-    file << enemy.gunDamage;
-    file << enemy.bombDamage;
+    file << player.orangeDamage;
+    file << player.bananaDamage;
+    file << player.cherryDamage;
     file.close();
 }
