@@ -27,7 +27,7 @@ void Game::start()
 	int screenWidth = 1024;
 	int screenHeight = 760;
 
-	InitWindow(screenWidth, screenHeight, "raylib [core] example - basic window");
+	InitWindow(screenWidth, screenHeight, "Brutal Fruit");
 	m_camera->offset = { (float)screenWidth / 2, (float)screenHeight / 2 };
 	m_camera->target = { (float)screenWidth / 2, (float)screenHeight / 2 };
 	m_camera->zoom = 1;
@@ -41,6 +41,7 @@ void Game::update(float deltaTime)
 	{
 		m_scenes[i]->update(deltaTime);
 	}
+	battleMenu(); 
 }
 
 void Game::draw()
@@ -48,7 +49,7 @@ void Game::draw()
 	BeginDrawing();
 
 	BeginMode2D(*m_camera);
-	ClearBackground(RAYWHITE);
+	ClearBackground(SKYBLUE);
 
 	for (int i = 0; i < m_sceneCount; i++)
 	{
@@ -62,15 +63,15 @@ void Game::draw()
 
 void Game::battleMenu()
 {
-	cout << "__________\n";
 	cout << "|Attack(1)|\n";;
-	cout << "|Defend(2)|n";
-	cout << "__________\n";
+	cout << "|Defend(2)|\n";
+	cout << "|_________|\n";
 }
+
+
 
 void Game::end()
 {
-
 	CloseWindow();
 }
 

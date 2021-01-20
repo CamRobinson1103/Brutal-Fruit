@@ -1,4 +1,4 @@
-
+#include "Actor.h"
 #include<string>
 class Player
 {
