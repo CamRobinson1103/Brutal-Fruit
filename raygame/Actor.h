@@ -182,6 +182,8 @@ private:
     /// </summary>
     void updateGlobalTransform();
 
+    Actor(const char* name, float health, float damage, float defense);
+
 protected:
     MathLibrary::Matrix3* m_globalTransform;
     MathLibrary::Matrix3* m_localTransform;
@@ -202,7 +204,14 @@ private:
     Sprite* m_sprite;
 
 public:
-    int health;
+    virtual float attack(Actor* other);
+    virtual float takeDamage(float damage);
+    virtual float getDamage() { return m_damage; }
+
+    const char* m_name = new char();
+    int m_health = 0;
+    float m_damage = 0;
+    float m_defense = 0;
     int orangeDamage;
     int bananaDamage;
     int cherryDamage;

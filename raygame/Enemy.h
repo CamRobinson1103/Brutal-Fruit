@@ -1,11 +1,12 @@
 #pragma once
 #include "Actor.h"
+
 class Enemy :
 	protected Actor
 {
 public:
 	Enemy();
-	Enemy(float x, float y, float collisionRadius, char icon, float maxSpeed);
+	Enemy(const char* name, float health, float damage, float defense);
 
 	void onCollision(Actor* other);
 	void update(float deltaTime) override;
@@ -14,5 +15,7 @@ public:
 private:
 	float m_health;
 	float m_damage;
+
+	virtual float attack(Actor* other);
 };
 

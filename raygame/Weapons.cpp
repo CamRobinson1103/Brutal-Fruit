@@ -23,7 +23,7 @@ int weapons()
 
     file.seekg(sizeof(Actor) * 2, std::ios::beg);
 
-    file << player.health << std::endl;
+    file << player.m_health << std::endl;
     file << player.orangeDamage;
     file << player.bananaDamage;
     file << player.cherryDamage;

@@ -1,12 +1,24 @@
-#include "Enemy.h"
+﻿#include "Enemy.h"
+#include <cstdlib>
+#include <ctime>
 
 Enemy::Enemy()
 {
 
 }
 
-Enemy::Enemy(float x, float y, float collisionRadius, char icon = ' ', float maxSpeed)
+Enemy::Enemy(const char* name, float health, float damage, float defense)
 {
+}
+
+float Enemy::attack(Actor* other)
+{
+	srand(static_cast<unsigned int>(time(0)));  // seed random number generator based on current time
+
+	int randomNumber = rand(); 
+	int randomDamage = (randomNumber % 6) + 1;
+	return takeDamage(getDamage() + randomDamage);
+
 	
 }
 

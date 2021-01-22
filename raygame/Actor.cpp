@@ -298,3 +298,17 @@ void Actor::updateGlobalTransform()
         m_children[i]->updateGlobalTransform();
     }
 }
+
+Actor::Actor(const char* name, float health, float damage, float defense)
+{
+    m_name = name;
+    m_health = health;
+    m_damage = damage;
+    m_defense = defense;
+}
+
+float Actor::attack(Actor* other)
+{
+    return other->takeDamage(m_damage);
+}
+
