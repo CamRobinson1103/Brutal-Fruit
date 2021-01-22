@@ -312,3 +312,14 @@ float Actor::attack(Actor* other)
     return other->takeDamage(m_damage);
 }
 
+float Actor::takeDamage(float damage)
+{
+    float totalDamage = damage - m_defense;
+
+    if (totalDamage < 0)
+        totalDamage = 0;
+
+    m_health -= totalDamage;
+    return damage;
+}
+
