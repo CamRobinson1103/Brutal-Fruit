@@ -1,6 +1,6 @@
-﻿#include "Enemy.h"
-#include <cstdlib>
+﻿#include <cstdlib>
 #include <ctime>
+#include "Enemy.h"
 
 Enemy::Enemy()
 {
@@ -9,6 +9,10 @@ Enemy::Enemy()
 
 Enemy::Enemy(const char* name, float health, float damage, float defense)
 {
+	m_name = name;
+	m_health = health;
+	m_damage = damage;
+	m_defense = defense;
 }
 
 float Enemy::attack(Actor* other)
@@ -17,14 +21,11 @@ float Enemy::attack(Actor* other)
 
 	int randomNumber = rand(); 
 	int randomDamage = (randomNumber % 6) + 1;
-	return takeDamage(getDamage() + randomDamage);
-
-	
+	return other->takeDamage(getDamage() + randomDamage);
 }
 
 void Enemy::onCollision(Actor* other)
 {
-
 
 	Actor::onCollision(other);
 }
