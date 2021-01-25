@@ -1,4 +1,8 @@
 #include "Game.h"
+#include "Player.h"
+#include "Actor.h"
+#include "Enemy.h"
+#include "Weapons.h"
 #include "raylib.h"
 #include <iostream>
 using namespace std;
@@ -17,6 +21,8 @@ Game::Game()
 	m_currentSceneIndex = 0;
 	m_sceneCount = 0;
 	Actor player = Actor();
+	Actor enemy = Actor();
+	Weapons weapons = Weapons();
 	player.orangeDamage = 10;
 	player.bananaDamage = 20;
 	player.cherryDamage = 15;
@@ -33,6 +39,13 @@ void Game::start()
 	m_camera->zoom = 1;
 
 	SetTargetFPS(60);
+
+	Scene** scene1 = new Scene*;
+	Scene** scene2 = new Scene*;
+	Scene** addScene(scene1);
+	Scene** addActor(Actor * enemy);
+	Scene** addActor(Actor * player);
+	Scene** addChild(Weapons * weapons);
 }
 
 void Game::update(float deltaTime)
@@ -49,7 +62,7 @@ void Game::draw()
 	BeginDrawing();
 
 	BeginMode2D(*m_camera);
-	ClearBackground(SKYBLUE);
+	ClearBackground(BLACK);
 
 	for (int i = 0; i < m_sceneCount; i++)
 	{
@@ -93,6 +106,15 @@ void Game::run()
 	}
 
 	end();
+}
+
+void Game()
+{
+	void start();
+	void update(float delaTime);
+	void draw();
+	void end();
+	void battleMenu();
 }
 
 Scene* Game::getScene(int index)

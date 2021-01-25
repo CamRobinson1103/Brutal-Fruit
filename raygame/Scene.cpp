@@ -7,6 +7,10 @@ Scene::Scene()
     m_world = new MathLibrary::Matrix3();
 }
 
+Scene::~Scene()
+{
+}
+
 MathLibrary::Matrix3* Scene::getWorld()
 {
     return m_world;
