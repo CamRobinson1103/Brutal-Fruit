@@ -2,20 +2,20 @@
 #include "Actor.h"
 
 class Enemy :
-	protected Actor
+	public Actor
 {
 public:
-	Enemy();
-	Enemy(const char* name, float health, float damage, float defense);
+	Enemy(const char* name, float health, float damage, float defense, Sprite* sprite);
 
 	void onCollision(Actor* other);
-	void update(float deltaTime) override;
-	void draw() override;
+	virtual void update(float deltaTime) override;
+	virtual void draw() override;
 
 private:
 	float m_health;
 	float m_damage;
+	Sprite* m_sprite;
 
-	virtual float attack(Actor* other);
+	virtual float attack(Actor* other) override;
 };
 
