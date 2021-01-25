@@ -9,6 +9,7 @@
     <ClCompile Include="Sprite.cpp" />
     <ClCompile Include="Enemy.cpp" />
     <ClCompile Include="Weapons.cpp" />
+    <ClCompile Include="Arena.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Actor.h" />
@@ -18,10 +19,6 @@
     <ClInclude Include="Sprite.h" />
     <ClInclude Include="Enemy.h" />
     <ClInclude Include="Weapons.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <Filter Include="Assests">
-      <UniqueIdentifier>{0f7d76f3-55ac-48db-8c39-b205b628799c}</UniqueIdentifier>
-    </Filter>
+    <ClInclude Include="Arena.h" />
   </ItemGroup>
 </Project>
